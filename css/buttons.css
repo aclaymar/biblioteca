@@ -1,0 +1,60 @@
+
+    .catalogo-button {
+      padding: 15px 30px;
+      font-size: 1.1em;
+      background-color: #e67e22;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .catalogo-button:hover {
+      background-color: #cf711f;
+    }
+.login-buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.login-buttons a img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: inline-block;
+}
+
+.login-buttons a {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 0.9em;
+      text-decoration: none;
+      color: white;
+      white-space: nowrap;
+    }
+
+
+
+    .login-buttons a.login {
+      background-color: #4d6d8a;
+    }
+
+    .login-buttons a.google {
+      background-color: white;
+      color: #444;
+      border: 1px solid #ddd;
+    }
+
+    .login-buttons a.facebook {
+      background-color: white;
+      color: #444;
+      border: 1px solid #ddd;
+    }

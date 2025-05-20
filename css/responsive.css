@@ -1,0 +1,34 @@
+
+ @media (max-width: 600px) {
+      .hero-title {
+        font-size: 1.8em;
+        margin-top: 80px;
+      }
+
+      .catalogo-button {
+        padding: 12px 24px;
+        font-size: 1em;
+      }
+
+      .login-area {
+  align-items: center;
+  max-width: none;
+}
+
+.login-area span {
+  text-align: center;
+}
+
+.login-buttons {
+  flex-direction: column;
+  align-items: center;
+}
+
+      .top-bar {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+    
+    }
