@@ -10,18 +10,27 @@
       align-items: center;
       flex-wrap: wrap;
     }
+    
+    .top-bar img.logo {
+    height: 400px;
+    margin-top: -100px
+}
 
 .logo {
   height: 300px;
+  margin-top: -100px;
 }
 
- .login-area {
+.login-area {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 6px;
-  max-width: 300px;
+  justify-content: flex-end;
+  padding-right: 20px;
+  gap: 8px;
+  max-width: 250px;
 }
+
 
 .login-area span {
   font-size: 0.9em;

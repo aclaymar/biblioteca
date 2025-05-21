@@ -13,30 +13,56 @@
 <link rel="stylesheet" href="css/responsive.css">
 
 
+
 </head>
 <body>
   <div class="hero">
     <div class="top-bar">
       <img src="img/logo.png" alt="Logotipo da Biblioteca" class="logo">
       <div class="login-area">
-        <span>Faça o login para explorar nossa coleção de livros e acompanhar seus empréstimos</span>
-        <div class="login-buttons">
-          <a href="login.php" class="login">Login</a>
-          <a href="login_google.php" class="google">
-            <img src="img/google-icon.png" alt="Google">Google
-          </a>
-          <a href="login_facebook.php" class="facebook">
-            <img src="img/facebook-icon.png" alt="Facebook">Facebook
-          </a>
-        </div>
+      <div style="display: flex; justify-content: center; gap: 10px; top: 010px; right: 50px; position: absolute;">
+  <a href="login.php" style="padding: 10px 20px; background: #2c3e50; color: white; text-decoration: none; border-radius: 5px;">Entrar</a>
+  <a href="cadastro.php" style="padding: 10px 20px; background: #27ae60; color: white; text-decoration: none; border-radius: 5px;">Cadastrar</a>
+</div>
+
       </div>
     </div>
 
-    <h1 class="hero-title">Bem-vindo à nossa<br><strong>BIBLIOTECA DIGITAL</strong></h1>
+    
     <a class="catalogo-button" href="catalogo.php">Catálogo</a>
     <footer>
       <p>&copy; 2025 Biblioteca Digital. Projeto Integrador UNIVESP.</p>
     </footer>
   </div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-auth.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "SUA_API_KEY",
+      authDomain: "SEU_PROJETO.firebaseapp.com",
+      projectId: "SEU_PROJETO_ID",
+      appId: "SUA_APP_ID"
+    };
+
+
+    firebase.initializeApp(firebaseConfig);
+    const provider = new firebase.auth.GoogleAuthProvider();
+
+    function loginComGoogle() {
+      firebase.auth()
+        .signInWithPopup(provider)
+        .then((result) => {
+          const usuario = result.user;
+          alert("Bem-vindo, " + usuario.displayName);
+          window.location.href = "dashboard.php";
+        })
+        .catch((error) => {
+          console.error("Erro ao logar com Google:", error);
+          alert("Erro ao logar com Google: " + error.message);
+        });
+    }
+  </script>
 </body>
 </html>
