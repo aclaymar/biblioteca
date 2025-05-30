@@ -1,5 +1,3 @@
-# 📚 Biblioteca Digital - Projeto Integrador UNIVESP
-(Sumário reduzido — completo já enviado em conversa anterior)
 # 📚 Biblioteca Digital — Projeto Integrador UNIVESP
 
 Este projeto é uma aplicação web desenvolvida em PHP, MySQL e HTML/CSS com o objetivo de gerenciar empréstimos de livros, promovendo o acesso digital à leitura. Conta com painel de administração, login social e controle completo dos empréstimos.
